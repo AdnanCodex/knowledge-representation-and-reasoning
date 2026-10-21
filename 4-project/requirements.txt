@@ -1,0 +1,6 @@
+streamlit>=1.36
+networkx>=3.2
+pyvis>=0.3.2
+rdflib>=7.0
+# Optional: real SWI-Prolog bridge (SWI-Prolog must be installed separately)
+# pyswip>=0.2.10
