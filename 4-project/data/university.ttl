@@ -1,0 +1,132 @@
+@prefix uni: <http://knowlogic.ai/ontology/university#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+uni:Person a owl:Class .
+uni:Student a owl:Class ; rdfs:subClassOf uni:Person .
+uni:Instructor a owl:Class ; rdfs:subClassOf uni:Person .
+uni:Course a owl:Class .
+uni:Department a owl:Class .
+
+uni:enrolledIn a owl:ObjectProperty ; rdfs:domain uni:Student ; rdfs:range uni:Course .
+uni:hasCompleted a owl:ObjectProperty ; rdfs:domain uni:Student ; rdfs:range uni:Course .
+uni:teaches a owl:ObjectProperty ; rdfs:domain uni:Instructor ; rdfs:range uni:Course .
+uni:hasPrerequisite a owl:ObjectProperty ; rdfs:domain uni:Course ; rdfs:range uni:Course .
+uni:belongsToDepartment a owl:ObjectProperty ; rdfs:range uni:Department .
+
+uni:Artificial_Intelligence a uni:Department ; rdfs:label "Artificial Intelligence" .
+uni:Computer_Science a uni:Department ; rdfs:label "Computer Science" .
+uni:Mathematics a uni:Department ; rdfs:label "Mathematics" .
+uni:ali a uni:Student ; rdfs:label "Ali Raza" ; uni:belongsToDepartment uni:Computer_Science .
+uni:ayesha a uni:Student ; rdfs:label "Ayesha Khan" ; uni:belongsToDepartment uni:Artificial_Intelligence .
+uni:hassan a uni:Student ; rdfs:label "Hassan Ali" ; uni:belongsToDepartment uni:Computer_Science .
+uni:zara a uni:Student ; rdfs:label "Zara Iqbal" ; uni:belongsToDepartment uni:Computer_Science .
+uni:omar a uni:Student ; rdfs:label "Omar Farooq" ; uni:belongsToDepartment uni:Artificial_Intelligence .
+uni:danish a uni:Student ; rdfs:label "Danish Mehmood" ; uni:belongsToDepartment uni:Computer_Science .
+uni:kinza a uni:Student ; rdfs:label "Kinza Tariq" ; uni:belongsToDepartment uni:Artificial_Intelligence .
+uni:shayan a uni:Student ; rdfs:label "Shayan Ahmed" ; uni:belongsToDepartment uni:Computer_Science .
+uni:mahnoor a uni:Student ; rdfs:label "Mahnoor Fatima" ; uni:belongsToDepartment uni:Mathematics .
+uni:usama a uni:Student ; rdfs:label "Usama Khalid" ; uni:belongsToDepartment uni:Computer_Science .
+uni:iqra a uni:Student ; rdfs:label "Iqra Aziz" ; uni:belongsToDepartment uni:Artificial_Intelligence .
+uni:hamza a uni:Student ; rdfs:label "Hamza Sheikh" ; uni:belongsToDepartment uni:Computer_Science .
+uni:dr_ahmed a uni:Instructor ; rdfs:label "Dr. Ahmed Khan" ; uni:belongsToDepartment uni:Computer_Science .
+uni:dr_sara a uni:Instructor ; rdfs:label "Dr. Sara Malik" ; uni:belongsToDepartment uni:Artificial_Intelligence .
+uni:dr_bilal a uni:Instructor ; rdfs:label "Dr. Bilal Ahmed" ; uni:belongsToDepartment uni:Mathematics .
+uni:dr_fatima a uni:Instructor ; rdfs:label "Dr. Fatima Noor" ; uni:belongsToDepartment uni:Computer_Science .
+uni:dr_usman a uni:Instructor ; rdfs:label "Dr. Usman Tariq" ; uni:belongsToDepartment uni:Computer_Science .
+uni:dr_maryam a uni:Instructor ; rdfs:label "Dr. Maryam Aslam" ; uni:belongsToDepartment uni:Artificial_Intelligence .
+uni:CS101 a uni:Course ; rdfs:label "CS101 - Introduction to Programming" ; uni:belongsToDepartment uni:Computer_Science .
+uni:CS102 a uni:Course ; rdfs:label "CS102 - Data Structures" ; uni:belongsToDepartment uni:Computer_Science .
+uni:CS201 a uni:Course ; rdfs:label "CS201 - Algorithms" ; uni:belongsToDepartment uni:Computer_Science .
+uni:CS202 a uni:Course ; rdfs:label "CS202 - Operating Systems" ; uni:belongsToDepartment uni:Computer_Science .
+uni:CS305 a uni:Course ; rdfs:label "CS305 - Database Systems" ; uni:belongsToDepartment uni:Computer_Science .
+uni:CS310 a uni:Course ; rdfs:label "CS310 - Computer Networks" ; uni:belongsToDepartment uni:Computer_Science .
+uni:CS320 a uni:Course ; rdfs:label "CS320 - Software Engineering" ; uni:belongsToDepartment uni:Computer_Science .
+uni:MATH101 a uni:Course ; rdfs:label "MATH101 - Calculus I" ; uni:belongsToDepartment uni:Mathematics .
+uni:MATH201 a uni:Course ; rdfs:label "MATH201 - Statistics" ; uni:belongsToDepartment uni:Mathematics .
+uni:MATH301 a uni:Course ; rdfs:label "MATH301 - Linear Algebra" ; uni:belongsToDepartment uni:Mathematics .
+uni:AI301 a uni:Course ; rdfs:label "AI301 - Machine Learning" ; uni:belongsToDepartment uni:Artificial_Intelligence .
+uni:AI302 a uni:Course ; rdfs:label "AI302 - Natural Language Processing" ; uni:belongsToDepartment uni:Artificial_Intelligence .
+uni:AI303 a uni:Course ; rdfs:label "AI303 - Computer Vision" ; uni:belongsToDepartment uni:Artificial_Intelligence .
+uni:AI305 a uni:Course ; rdfs:label "AI305 - Data Science" ; uni:belongsToDepartment uni:Artificial_Intelligence .
+uni:AI401 a uni:Course ; rdfs:label "AI401 - Deep Learning" ; uni:belongsToDepartment uni:Artificial_Intelligence .
+uni:ali uni:enrolledIn uni:CS201 .
+uni:ayesha uni:enrolledIn uni:AI301 .
+uni:danish uni:enrolledIn uni:CS102 .
+uni:danish uni:enrolledIn uni:MATH101 .
+uni:hamza uni:enrolledIn uni:CS201 .
+uni:hamza uni:enrolledIn uni:CS320 .
+uni:hassan uni:enrolledIn uni:CS102 .
+uni:iqra uni:enrolledIn uni:AI302 .
+uni:iqra uni:enrolledIn uni:AI401 .
+uni:kinza uni:enrolledIn uni:AI305 .
+uni:kinza uni:enrolledIn uni:CS201 .
+uni:mahnoor uni:enrolledIn uni:CS101 .
+uni:mahnoor uni:enrolledIn uni:MATH201 .
+uni:omar uni:enrolledIn uni:CS102 .
+uni:omar uni:enrolledIn uni:MATH101 .
+uni:shayan uni:enrolledIn uni:CS305 .
+uni:shayan uni:enrolledIn uni:CS310 .
+uni:usama uni:enrolledIn uni:CS101 .
+uni:usama uni:enrolledIn uni:MATH101 .
+uni:zara uni:enrolledIn uni:CS201 .
+uni:ali uni:hasCompleted uni:CS101 .
+uni:ali uni:hasCompleted uni:CS102 .
+uni:ali uni:hasCompleted uni:MATH101 .
+uni:ayesha uni:hasCompleted uni:CS101 .
+uni:ayesha uni:hasCompleted uni:CS102 .
+uni:ayesha uni:hasCompleted uni:CS201 .
+uni:ayesha uni:hasCompleted uni:MATH101 .
+uni:ayesha uni:hasCompleted uni:MATH201 .
+uni:danish uni:hasCompleted uni:CS101 .
+uni:hamza uni:hasCompleted uni:CS101 .
+uni:hamza uni:hasCompleted uni:CS102 .
+uni:hassan uni:hasCompleted uni:CS101 .
+uni:iqra uni:hasCompleted uni:AI301 .
+uni:iqra uni:hasCompleted uni:CS101 .
+uni:iqra uni:hasCompleted uni:CS102 .
+uni:iqra uni:hasCompleted uni:CS201 .
+uni:iqra uni:hasCompleted uni:MATH101 .
+uni:iqra uni:hasCompleted uni:MATH201 .
+uni:kinza uni:hasCompleted uni:CS101 .
+uni:kinza uni:hasCompleted uni:CS102 .
+uni:kinza uni:hasCompleted uni:MATH101 .
+uni:kinza uni:hasCompleted uni:MATH201 .
+uni:mahnoor uni:hasCompleted uni:MATH101 .
+uni:omar uni:hasCompleted uni:CS101 .
+uni:shayan uni:hasCompleted uni:CS101 .
+uni:shayan uni:hasCompleted uni:CS102 .
+uni:shayan uni:hasCompleted uni:CS201 .
+uni:shayan uni:hasCompleted uni:MATH101 .
+uni:zara uni:hasCompleted uni:CS101 .
+uni:zara uni:hasCompleted uni:CS102 .
+uni:zara uni:hasCompleted uni:MATH101 .
+uni:dr_ahmed uni:teaches uni:CS101 .
+uni:dr_ahmed uni:teaches uni:CS102 .
+uni:dr_bilal uni:teaches uni:MATH101 .
+uni:dr_bilal uni:teaches uni:MATH201 .
+uni:dr_bilal uni:teaches uni:MATH301 .
+uni:dr_fatima uni:teaches uni:CS201 .
+uni:dr_fatima uni:teaches uni:CS305 .
+uni:dr_fatima uni:teaches uni:CS320 .
+uni:dr_maryam uni:teaches uni:AI303 .
+uni:dr_maryam uni:teaches uni:AI305 .
+uni:dr_sara uni:teaches uni:AI301 .
+uni:dr_sara uni:teaches uni:AI302 .
+uni:dr_sara uni:teaches uni:AI401 .
+uni:dr_usman uni:teaches uni:CS202 .
+uni:dr_usman uni:teaches uni:CS310 .
+uni:AI301 uni:hasPrerequisite uni:CS201 .
+uni:AI301 uni:hasPrerequisite uni:MATH201 .
+uni:AI302 uni:hasPrerequisite uni:AI301 .
+uni:AI303 uni:hasPrerequisite uni:AI301 .
+uni:AI305 uni:hasPrerequisite uni:MATH201 .
+uni:AI401 uni:hasPrerequisite uni:AI301 .
+uni:CS102 uni:hasPrerequisite uni:CS101 .
+uni:CS201 uni:hasPrerequisite uni:CS102 .
+uni:CS202 uni:hasPrerequisite uni:CS102 .
+uni:CS305 uni:hasPrerequisite uni:CS102 .
+uni:CS310 uni:hasPrerequisite uni:CS201 .
+uni:CS320 uni:hasPrerequisite uni:CS102 .
+uni:MATH201 uni:hasPrerequisite uni:MATH101 .
+uni:MATH301 uni:hasPrerequisite uni:MATH101 .

@@ -1,0 +1,528 @@
+{
+  "students": [
+    {
+      "id": "ali",
+      "name": "Ali Raza",
+      "department": "Computer Science",
+      "semester": 5
+    },
+    {
+      "id": "ayesha",
+      "name": "Ayesha Khan",
+      "department": "Artificial Intelligence",
+      "semester": 7
+    },
+    {
+      "id": "hassan",
+      "name": "Hassan Ali",
+      "department": "Computer Science",
+      "semester": 3
+    },
+    {
+      "id": "zara",
+      "name": "Zara Iqbal",
+      "department": "Computer Science",
+      "semester": 5
+    },
+    {
+      "id": "omar",
+      "name": "Omar Farooq",
+      "department": "Artificial Intelligence",
+      "semester": 3
+    },
+    {
+      "id": "danish",
+      "name": "Danish Mehmood",
+      "department": "Computer Science",
+      "semester": 3
+    },
+    {
+      "id": "kinza",
+      "name": "Kinza Tariq",
+      "department": "Artificial Intelligence",
+      "semester": 5
+    },
+    {
+      "id": "shayan",
+      "name": "Shayan Ahmed",
+      "department": "Computer Science",
+      "semester": 7
+    },
+    {
+      "id": "mahnoor",
+      "name": "Mahnoor Fatima",
+      "department": "Mathematics",
+      "semester": 3
+    },
+    {
+      "id": "usama",
+      "name": "Usama Khalid",
+      "department": "Computer Science",
+      "semester": 1
+    },
+    {
+      "id": "iqra",
+      "name": "Iqra Aziz",
+      "department": "Artificial Intelligence",
+      "semester": 7
+    },
+    {
+      "id": "hamza",
+      "name": "Hamza Sheikh",
+      "department": "Computer Science",
+      "semester": 5
+    }
+  ],
+  "instructors": [
+    {
+      "id": "dr_ahmed",
+      "name": "Dr. Ahmed Khan",
+      "department": "Computer Science"
+    },
+    {
+      "id": "dr_sara",
+      "name": "Dr. Sara Malik",
+      "department": "Artificial Intelligence"
+    },
+    {
+      "id": "dr_bilal",
+      "name": "Dr. Bilal Ahmed",
+      "department": "Mathematics"
+    },
+    {
+      "id": "dr_fatima",
+      "name": "Dr. Fatima Noor",
+      "department": "Computer Science"
+    },
+    {
+      "id": "dr_usman",
+      "name": "Dr. Usman Tariq",
+      "department": "Computer Science"
+    },
+    {
+      "id": "dr_maryam",
+      "name": "Dr. Maryam Aslam",
+      "department": "Artificial Intelligence"
+    }
+  ],
+  "courses": [
+    {
+      "code": "CS101",
+      "title": "Introduction to Programming",
+      "department": "Computer Science",
+      "credits": 3
+    },
+    {
+      "code": "CS102",
+      "title": "Data Structures",
+      "department": "Computer Science",
+      "credits": 3
+    },
+    {
+      "code": "CS201",
+      "title": "Algorithms",
+      "department": "Computer Science",
+      "credits": 3
+    },
+    {
+      "code": "CS202",
+      "title": "Operating Systems",
+      "department": "Computer Science",
+      "credits": 3
+    },
+    {
+      "code": "CS305",
+      "title": "Database Systems",
+      "department": "Computer Science",
+      "credits": 3
+    },
+    {
+      "code": "CS310",
+      "title": "Computer Networks",
+      "department": "Computer Science",
+      "credits": 3
+    },
+    {
+      "code": "CS320",
+      "title": "Software Engineering",
+      "department": "Computer Science",
+      "credits": 3
+    },
+    {
+      "code": "MATH101",
+      "title": "Calculus I",
+      "department": "Mathematics",
+      "credits": 3
+    },
+    {
+      "code": "MATH201",
+      "title": "Statistics",
+      "department": "Mathematics",
+      "credits": 3
+    },
+    {
+      "code": "MATH301",
+      "title": "Linear Algebra",
+      "department": "Mathematics",
+      "credits": 3
+    },
+    {
+      "code": "AI301",
+      "title": "Machine Learning",
+      "department": "Artificial Intelligence",
+      "credits": 3
+    },
+    {
+      "code": "AI302",
+      "title": "Natural Language Processing",
+      "department": "Artificial Intelligence",
+      "credits": 3
+    },
+    {
+      "code": "AI303",
+      "title": "Computer Vision",
+      "department": "Artificial Intelligence",
+      "credits": 3
+    },
+    {
+      "code": "AI305",
+      "title": "Data Science",
+      "department": "Artificial Intelligence",
+      "credits": 4
+    },
+    {
+      "code": "AI401",
+      "title": "Deep Learning",
+      "department": "Artificial Intelligence",
+      "credits": 4
+    }
+  ],
+  "completed": [
+    [
+      "ali",
+      "CS101"
+    ],
+    [
+      "ali",
+      "CS102"
+    ],
+    [
+      "ali",
+      "MATH101"
+    ],
+    [
+      "ayesha",
+      "CS101"
+    ],
+    [
+      "ayesha",
+      "CS102"
+    ],
+    [
+      "ayesha",
+      "CS201"
+    ],
+    [
+      "ayesha",
+      "MATH101"
+    ],
+    [
+      "ayesha",
+      "MATH201"
+    ],
+    [
+      "danish",
+      "CS101"
+    ],
+    [
+      "hamza",
+      "CS101"
+    ],
+    [
+      "hamza",
+      "CS102"
+    ],
+    [
+      "hassan",
+      "CS101"
+    ],
+    [
+      "iqra",
+      "AI301"
+    ],
+    [
+      "iqra",
+      "CS101"
+    ],
+    [
+      "iqra",
+      "CS102"
+    ],
+    [
+      "iqra",
+      "CS201"
+    ],
+    [
+      "iqra",
+      "MATH101"
+    ],
+    [
+      "iqra",
+      "MATH201"
+    ],
+    [
+      "kinza",
+      "CS101"
+    ],
+    [
+      "kinza",
+      "CS102"
+    ],
+    [
+      "kinza",
+      "MATH101"
+    ],
+    [
+      "kinza",
+      "MATH201"
+    ],
+    [
+      "mahnoor",
+      "MATH101"
+    ],
+    [
+      "omar",
+      "CS101"
+    ],
+    [
+      "shayan",
+      "CS101"
+    ],
+    [
+      "shayan",
+      "CS102"
+    ],
+    [
+      "shayan",
+      "CS201"
+    ],
+    [
+      "shayan",
+      "MATH101"
+    ],
+    [
+      "zara",
+      "CS101"
+    ],
+    [
+      "zara",
+      "CS102"
+    ],
+    [
+      "zara",
+      "MATH101"
+    ]
+  ],
+  "enrolled": [
+    [
+      "ali",
+      "CS201"
+    ],
+    [
+      "ayesha",
+      "AI301"
+    ],
+    [
+      "danish",
+      "CS102"
+    ],
+    [
+      "danish",
+      "MATH101"
+    ],
+    [
+      "hamza",
+      "CS201"
+    ],
+    [
+      "hamza",
+      "CS320"
+    ],
+    [
+      "hassan",
+      "CS102"
+    ],
+    [
+      "iqra",
+      "AI302"
+    ],
+    [
+      "iqra",
+      "AI401"
+    ],
+    [
+      "kinza",
+      "AI305"
+    ],
+    [
+      "kinza",
+      "CS201"
+    ],
+    [
+      "mahnoor",
+      "CS101"
+    ],
+    [
+      "mahnoor",
+      "MATH201"
+    ],
+    [
+      "omar",
+      "CS102"
+    ],
+    [
+      "omar",
+      "MATH101"
+    ],
+    [
+      "shayan",
+      "CS305"
+    ],
+    [
+      "shayan",
+      "CS310"
+    ],
+    [
+      "usama",
+      "CS101"
+    ],
+    [
+      "usama",
+      "MATH101"
+    ],
+    [
+      "zara",
+      "CS201"
+    ]
+  ],
+  "teaches": [
+    [
+      "dr_ahmed",
+      "CS101"
+    ],
+    [
+      "dr_ahmed",
+      "CS102"
+    ],
+    [
+      "dr_bilal",
+      "MATH101"
+    ],
+    [
+      "dr_bilal",
+      "MATH201"
+    ],
+    [
+      "dr_bilal",
+      "MATH301"
+    ],
+    [
+      "dr_fatima",
+      "CS201"
+    ],
+    [
+      "dr_fatima",
+      "CS305"
+    ],
+    [
+      "dr_fatima",
+      "CS320"
+    ],
+    [
+      "dr_maryam",
+      "AI303"
+    ],
+    [
+      "dr_maryam",
+      "AI305"
+    ],
+    [
+      "dr_sara",
+      "AI301"
+    ],
+    [
+      "dr_sara",
+      "AI302"
+    ],
+    [
+      "dr_sara",
+      "AI401"
+    ],
+    [
+      "dr_usman",
+      "CS202"
+    ],
+    [
+      "dr_usman",
+      "CS310"
+    ]
+  ],
+  "prerequisites": [
+    [
+      "AI301",
+      "CS201"
+    ],
+    [
+      "AI301",
+      "MATH201"
+    ],
+    [
+      "AI302",
+      "AI301"
+    ],
+    [
+      "AI303",
+      "AI301"
+    ],
+    [
+      "AI305",
+      "MATH201"
+    ],
+    [
+      "AI401",
+      "AI301"
+    ],
+    [
+      "CS102",
+      "CS101"
+    ],
+    [
+      "CS201",
+      "CS102"
+    ],
+    [
+      "CS202",
+      "CS102"
+    ],
+    [
+      "CS305",
+      "CS102"
+    ],
+    [
+      "CS310",
+      "CS201"
+    ],
+    [
+      "CS320",
+      "CS102"
+    ],
+    [
+      "MATH201",
+      "MATH101"
+    ],
+    [
+      "MATH301",
+      "MATH101"
+    ]
+  ]
+}
