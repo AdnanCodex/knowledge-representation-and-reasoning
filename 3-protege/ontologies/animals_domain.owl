@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/krr/animals"
+         xmlns="http://example.org/krr/animals#">
+
+<owl:Ontology rdf:about="http://example.org/krr/animals"/>
+
+<owl:ObjectProperty rdf:about="#loves">
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Topic"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasOwner">
+  <rdfs:domain rdf:resource="#Dog"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <owl:inverseOf rdf:resource="#ownerOf"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#ownerOf">
+  <owl:inverseOf rdf:resource="#hasOwner"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Animal">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Mortal">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Human">
+  <rdfs:subClassOf rdf:resource="#Animal"/>
+  <rdfs:subClassOf rdf:resource="#Mortal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Student">
+  <rdfs:subClassOf rdf:resource="#Human"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Mammal">
+  <rdfs:subClassOf rdf:resource="#Animal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Fish">
+  <rdfs:subClassOf rdf:resource="#Animal"/>
+  <owl:disjointWith rdf:resource="#Mammal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Dog">
+  <rdfs:subClassOf rdf:resource="#Mammal"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasOwner"/>
+      <owl:someValuesFrom rdf:resource="#Human"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Topic">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#socrates">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#plato">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ali">
+  <rdf:type rdf:resource="#Student"/>
+  <loves rdf:resource="#ai"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ai">
+  <rdf:type rdf:resource="#Topic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#rex">
+  <rdf:type rdf:resource="#Dog"/>
+  <hasOwner rdf:resource="#ali"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bella">
+  <rdf:type rdf:resource="#Dog"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#salmon">
+  <rdf:type rdf:resource="#Fish"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#dolphin">
+  <rdf:type rdf:resource="#Mammal"/>
+</owl:NamedIndividual>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#socrates"/>
+    <rdf:Description rdf:about="#plato"/>
+    <rdf:Description rdf:about="#ali"/>
+    <rdf:Description rdf:about="#rex"/>
+    <rdf:Description rdf:about="#bella"/>
+    <rdf:Description rdf:about="#salmon"/>
+    <rdf:Description rdf:about="#dolphin"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+
+</rdf:RDF>
