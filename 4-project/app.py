@@ -153,7 +153,7 @@ with st.sidebar:
     if st.button("↺ Reset sample data", width="stretch"):
         st.session_state.kb = load_sample_kb(); st.session_state.chat_msgs = []
         st.session_state.highlight = []; touch(); st.rerun()
-    st.caption("v4.0 · Streamlit + SWI-Prolog + NetworkX + RDFLib")
+    st.caption("v4.1 · Streamlit + SWI-Prolog + NetworkX + RDFLib")
 
 
 def hero(title: str, subtitle: str) -> None:
@@ -236,30 +236,7 @@ def page_dashboard() -> None:
         st.subheader("📈 Enrollments per course")
         st.bar_chart({code: len(kb.students_in_course(code)) for code in sorted(kb.courses)})
 
-    st.subheader("🏫 Courses by department")
-    dept_counts: dict[str, int] = {}
-    for c in kb.courses.values():
-        dept_counts[c.department] = dept_counts.get(c.department, 0) + 1
-    st.bar_chart(dept_counts)
-
-    st.subheader("👩‍🏫 Instructor workload")
-    st.dataframe([{"Instructor": r["instructor"], "Courses": r["course_count"],
-                   "Students taught": r["students_taught"], "Enrolments": r["enrolments"],
-                   "Course list": ", ".join(r["courses"])} for r in engine.instructor_workload()],
-                 width="stretch", hide_index=True)
-
-    def _goto(page_name: str) -> None:
-        st.session_state.nav_page = page_name
-
-    st.subheader("⚡ Quick actions")
-    q1, q2, q3, q4 = st.columns(4)
-    q1.button("🕸️ Open knowledge graph", key="qa-graph", on_click=_goto, args=("🕸️ Knowledge Graph",))
-    q2.button("🔮 Try the What-If simulator", key="qa-whatif", on_click=_goto, args=("🔮 What-If Simulator",))
-    q3.button("⚠️ Run consistency check", key="qa-check", on_click=_goto, args=("⚠️ Contradictions",))
-    q4.download_button("📄 Download KB report", build_report(), "knowlogic_report.md",
-                       mime="text/markdown")
-
-    st.subheader("⚙️ Reasoning rules (R1–R8)")
+    st.subheader("⚙️ Reasoning rules (R1–R10)")
     with st.expander("View all rules (Prolog form)"):
         for rid, rule in RULES.items():
             st.code(f"{rid}: {rule}", language="prolog")
@@ -554,6 +531,13 @@ def page_kb() -> None:
         st.download_button("⬇️ Download KB backup (JSON)",
                            json.dumps(kb.to_dict(), indent=2),
                            "knowlogic_kb.json", mime="application/json")
+        st.download_button("📄 Download KB report (Markdown)", build_report(),
+                           "knowlogic_report.md", mime="text/markdown")
+        st.subheader("👩‍🏫 Instructor workload")
+        st.dataframe([{"Instructor": r["instructor"], "Courses": r["course_count"],
+                       "Students taught": r["students_taught"], "Enrolments": r["enrolments"],
+                       "Course list": ", ".join(r["courses"])} for r in engine.instructor_workload()],
+                     width="stretch", hide_index=True)
         up = st.file_uploader("Restore KB from JSON backup", type=["json"])
         if up and st.button("Restore uploaded KB"):
             try:
